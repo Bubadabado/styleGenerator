@@ -4,10 +4,6 @@ let imageCounter = 0;
 
 document.getElementById("colorSubmit").addEventListener("click", function(event) {
     event.preventDefault();
-    // const value = document.getElementById("paramsInput").value;
-    // if (value === "")
-    //     return;
-    //console.log(value);
 
     //get a random color scheme
     var url = "http://colormind.io/api/";
@@ -51,7 +47,7 @@ function applyPallete()
     }
 
     //set footer color
-    setElementStyle(palette[4], function() { return document.getElementById("pageFooter"); }, "position: sticky; width: 55%; margin-left: auto; margin-right: auto; border-radius: 8px;");
+    setElementStyle(palette[4], function() { return document.getElementById("pageFooter"); }, "position: sticky; width: 55%; margin-left: auto; margin-right: auto; border-radius: 8px; bottom: 8px;");
     setElementStyle(palette[4], function() { return document.getElementById("githubRepo"); });
 
     //show color palette
@@ -74,9 +70,6 @@ function applyPallete()
     for(let i = 0; i < document.querySelectorAll("input[type=submit]").length; i++) {
         setElementStyle(palette[2], function() { return document.querySelectorAll("input")[i]; });
     }
-
-    //style the footer
-    // document.getElementById("pageFooter").style = ;
 }
 
 function setElementStyle(targetCol, selectElement, additionalStyling = "") {
@@ -85,8 +78,6 @@ function setElementStyle(targetCol, selectElement, additionalStyling = "") {
 
     selectElement().style = styleText;
 }
-
-
 
 document.getElementById("contentSubmit").addEventListener("click", function(event) {
     event.preventDefault();
@@ -113,7 +104,7 @@ document.getElementById("contentSubmit").addEventListener("click", function(even
         
         targetElement.innerHTML = targetHtml;
 
-        document.getElementById("pageFooter").style = "position: sticky; width: 55%; margin-left: auto; margin-right: auto; border-radius: 8px;";
+        document.getElementById("pageFooter").style = "position: sticky; width: 55%; margin-left: auto; margin-right: auto; border-radius: 8px; bottom: 8px";
 
         if(colorsChosen) {
             applyPallete();
