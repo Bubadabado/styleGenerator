@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+        <title>Site Generator</title>
+        <link rel='stylesheet' href='styles.css'/>
+    </head>
+    <body>
+        <body id="pageContent">
+            <div class="page-content">
+                <div class="page-header" id="pageHeader">
+                    <h1>Site Generator</h1>
+                </div>
+                <div class="content-container">
+                    <h3>Generate site</h3>
+                    <form>
+                        <!-- <input type="text" id="paramsInput" name="params" placeholder="Input Parameters"> -->
+                        <label for="contentSubmit">Generate content</label>
+                        <input type="submit" id="contentSubmit" name="content-submit">
+                        <br>
+                        <label for="colorSubmit">Generate color scheme</label>
+                        <input type="submit" id="colorSubmit" name="color-submit">
+                    </form>
+                    <div id="colorResults"></div>
+                </div>
+                <div id="addedContent"></div>
+            </div>
+            
+            <div id="pageFooter">
+                <p>Created by Adam Robertson. <a href="https://github.com/Bubadabado/priceTracker" id="githubRepo">Github Repository</a></p>
+            </div>
+            <script src="script.js"></script>
+        </body>
+    </body>
+</html>
